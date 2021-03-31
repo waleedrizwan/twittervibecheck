@@ -1,4 +1,4 @@
-TwitterVibeCheck.com
+[TwitterVibeCheck.com](https://www.twittervibecheck.com)
 
 credits to @djoksimo for the initial API functionality.
 
