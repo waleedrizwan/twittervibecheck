@@ -23,7 +23,7 @@ const CenteredModal = (props) => {
           and the tweets will appear below.
           <br />
           If you enjoy using the site please consider giving us a star on{" "}
-          <a href="https://github.com/waleedrizwan/tweet_scope"> Github⭐</a>
+          <a href="https://github.com/waleedrizwan/twittervibecheck"> Github⭐</a>
         </p>
       </Modal.Body>
 

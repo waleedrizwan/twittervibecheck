@@ -144,7 +144,7 @@ const About = (props) => {
           opinions and it gives us an up to date mental status of the world.
           Given that Twitter has millions of users of all backgrounds, it is the
           perfect resource for real-time global sentiment analysis.
-          <a href="https://github.com/waleedrizwan/tweet_scope">
+          <a href="https://github.com/waleedrizwan/twittervibecheck">
             {" "}
             To contribute fork the repo and make a pull request on the repo
             found here.{" "}

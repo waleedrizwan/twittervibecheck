@@ -1,6 +1,6 @@
 [TwitterVibeCheck.com](https://www.twittervibecheck.com)
 
-credits to @djoksimo for the initial API functionality.
+credits to @djoksimo for teaching me how to use Flask
 
 This project uses the vaderSentiment Python package to analyze text. VADER (Valence Aware Dictionary and sentiment Reasoner) is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media.
 
