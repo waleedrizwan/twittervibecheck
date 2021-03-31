@@ -1,0 +1,132 @@
+.float-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+input {
+  height: 2pc;
+}
+
+.submitButton {
+  /* border: none; */
+  color: rgb(14, 10, 220);
+  width: 10pc;
+  /* padding: 0px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  height: 2pc;
+}
+
+.dropdown-menu {
+  border: none;
+  color: white;
+  width: 200pc;
+  padding: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 2pc;
+}
+
+#contener {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#selectTag {
+  height: 2pc;
+}
+
+#inner {
+  height: 350px;
+}
+
+.preloader {
+  animation: spin 2.5s ease-in-out infinite;
+}
+
+#aboutSentiment {
+  line-height: 2;
+}
+
+li{
+  margin: 10px 0;
+}
+
+table {
+  border: 2px;
+
+}
+
+
+.spinner {
+  height: 200px;
+  width: 50%;
+}
+
+
+/* .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  /* position: absolute;
+  z-index: 1;
+} */
+
+/* .tooltip:hover .tooltiptext {
+  visibility: visible;
+} */ */
+
+
+.modal {
+  font-size: 12px;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
