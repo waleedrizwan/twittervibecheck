@@ -4,10 +4,12 @@ import { useSelector, useDispatch } from "react-redux";
 import * as tweetActions from "../store/actions/tweets";
 import { makeStyles } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
+import Badge from "react-bootstrap/Badge";
 
 const Header = (props) => {
   const dispatch = useDispatch();
   const tweetsData = useSelector((state) => state.tweets.tweetsArray);
+
   const totalTweetsToDate = useSelector((state) => state.tweets.tweetsToDate);
   const useStyles = makeStyles((theme) => ({
     fab: {
@@ -19,6 +21,31 @@ const Header = (props) => {
       right: theme.spacing(3),
     },
   }));
+
+  const [trendingTopicId, setTrendingTopics] = useState("23424775");
+  const woeids = { Canada: "23424775" };
+
+  useEffect(() => {
+
+    fetch(
+      `https://tweetscopeapitest.herokuapp.com/user?locationId=${trendingTopicId}&selection=trendingTopics`,
+
+      {
+        method: "POST",
+        mode: "cors",
+
+        cache: "no-cache",
+        headers: new Headers({
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        }),
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, [trendingTopicId]);
+
+
 
   useEffect(() => {
     const inittotalTweets = async () => {
@@ -36,7 +63,6 @@ const Header = (props) => {
       let currentTotal;
 
       for (const key in resData) {
-       
         currentTotal = parseFloat(resData[key].tweetsToDate);
       }
 
@@ -53,19 +79,20 @@ const Header = (props) => {
   const MyComponent = React.forwardRef(function MyComponent(props, ref) {
     //  Spread the props to the underlying DOM element.
     return (
-      <div {...props} ref={ref}>
-         tweets analyzed to date {formatNumber(totalTweetsToDate)}
+      <div {...props} ref={ref} style={{ fontSize: "20px" }}>
+        Tweets analyzed to date{" "}
+        <Badge variant="primary"> {formatNumber(totalTweetsToDate)}</Badge>
       </div>
     );
   });
 
-  let today = new Date()
+  let today = new Date();
   return (
     <div>
       <div className="text-center">
         <br></br>
         <br></br>
-        <h1 className="text-center text-primary">Extractor</h1>
+        <h1 className="text-center text-primary">API Wrapper</h1>
         <h6>
           <Tooltip title={`As of ${today}`}>
             <MyComponent />
