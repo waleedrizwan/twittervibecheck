@@ -81,7 +81,7 @@ function App() {
             </Navbar.Collapse>
           </Navbar>
           <ReactTooltip place="right" type="dark" effect="float" />
-          <ScrollContainer/>
+          
           <Switch>
             <Route path="/about">
               <AboutPage />
