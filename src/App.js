@@ -91,7 +91,7 @@ function App() {
             </Route>
           </Switch>
 
-          <CustomFooter />
+          {/* <CustomFooter /> */}
           <CenteredModal show={modalShow} onHide={() => setModalShow(false)} />
         </Router>
       </Provider>
@@ -102,7 +102,11 @@ function App() {
 const Home = () => {
   return (
     <div>
+      
       <Header />
+      <br/>
+      <br/>
+      <br/>
       <br/>
       <SearchBar />
       <TweetTable />

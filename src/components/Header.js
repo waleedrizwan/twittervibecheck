@@ -9,10 +9,14 @@ import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import "./Header.css";
+import ClipLoader from "react-spinners/ClipLoader";
+import PulseLoader from "react-spinners/PulseLoader";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 const Header = (props) => {
   const dispatch = useDispatch();
   const tweetsData = useSelector((state) => state.tweets.tweetsArray);
+  const [isLoading, setIsLoading] = useState(false);
 
   const totalTweetsToDate = useSelector((state) => state.tweets.tweetsToDate);
   const useStyles = makeStyles((theme) => ({
@@ -36,9 +40,10 @@ const Header = (props) => {
   };
 
   const [trendingTopicId, setTrendingTopicId] = useState(woeids["Canada"]);
-  const [trendingList, setTrendingList] = useState();
+  const [trendingList, setTrendingList] = useState([]);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch(
       `https://tweetscopeapitest.herokuapp.com/user?locationId=${trendingTopicId}&selection=trendingTopics`,
 
@@ -56,7 +61,12 @@ const Header = (props) => {
       .then((response) => response.json())
       .then((data) => {
         setTrendingList(data);
+        setIsLoading(false);
         // console.log(trendingList);
+      })
+      .catch((err) => {
+        setTrendingList([]);
+        setIsLoading(false);
       });
   }, [trendingTopicId]);
 
@@ -111,6 +121,8 @@ const Header = (props) => {
     );
   });
 
+  const color = "#4A90E2";
+
   let today = new Date();
   return (
     <div>
@@ -125,11 +137,13 @@ const Header = (props) => {
         </h6>
 
         <br />
+        <br />
+        <br />
       </div>
 
       <div style={{ display: "flex", justifyContent: "center" }}>
         <h3 style={{ justifyContent: "row" }} className="text-center">
-           Trending Topics In
+          Trending Topics In
         </h3>
 
         <div>
@@ -151,18 +165,20 @@ const Header = (props) => {
       </div>
 
       <div className="container" style={{ width: "300px" }}>
-        <Table
-          // responsive="sm"
-          striped
-          bordered
-          hover
-          size="sm"
-        >
-          <thead>
-            <tr>{/* <th className="sticky-column">Trending Topics</th> */}</tr>
-          </thead>
-          <tbody>{handleTrendingTopics()}</tbody>
-        </Table>
+        {isLoading ? (
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <PulseLoader color={color} loading={true} size={10} margin={2} />
+          </div>
+        ) : trendingList.length === 0 ? (
+          <p>No Trending Topics Were Found</p>
+        ) : (
+          <Table striped bordered hover size="sm">
+            <thead>
+              <tr></tr>
+            </thead>
+            <tbody>{handleTrendingTopics()}</tbody>
+          </Table>
+        )}
       </div>
     </div>
   );
