@@ -1,0 +1,18 @@
+.sticky-column {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 1
+}
+
+.container {
+    /* border: 1px solid #eeccee; */
+    max-height: 200px;
+    overflow-y: scroll;
+    width: 50%;
+}
+
+
+.table {
+
+    width:50px;
+}

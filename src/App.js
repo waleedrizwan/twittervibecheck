@@ -13,7 +13,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import ReduxThunk from "redux-thunk";
 import CustomFooter from "./components/CustomFooter";
 import CenteredModal from "./components/CenteredModal";
-import ScrollContainer from './components/ScrollContainer';
+import ScrollContainer from "./components/ScrollContainer";
 
 import ReactTooltip from "react-tooltip";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -81,7 +81,7 @@ function App() {
             </Navbar.Collapse>
           </Navbar>
           <ReactTooltip place="right" type="dark" effect="float" />
-          
+
           <Switch>
             <Route path="/about">
               <AboutPage />
@@ -103,6 +103,7 @@ const Home = () => {
   return (
     <div>
       <Header />
+      <br/>
       <SearchBar />
       <TweetTable />
     </div>
@@ -114,4 +115,3 @@ const AboutPage = () => {
 };
 
 export default App;
-
