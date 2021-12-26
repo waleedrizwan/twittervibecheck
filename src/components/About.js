@@ -81,10 +81,7 @@ const About = (props) => {
               <strong> VADER </strong> performs very well with emojis, slangs,
               and acronyms in sentences
               <br />
-              <br />
-              {/* <img src="https://miro.medium.com/max/512/1*rZZGKj3tYbxInh_0k31Ttg.png"></img> */}
-              {/* <br />
-              <br /> */}
+              <br />            
               <a>
                 <strong>The Compound Score</strong> is a metric that calculates
                 the sum of all the lexicon ratings which have been normalized
@@ -151,13 +148,7 @@ const About = (props) => {
           </a>
           Feel free to send me any suggestions.
         </Typography>
-      </Container>
-      {/* <footer className={classes.footer}>
-        <Container maxWidth="sm">
-          <Typography variant="body1">About</Typography>
-          <Copyright />
-        </Container>
-      </footer> */}
+      </Container>     
     </div>
   );
 };

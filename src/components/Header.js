@@ -129,7 +129,7 @@ const Header = (props) => {
       <div className="text-center">
         <br></br>
         <br></br>
-        <h1 className="text-center text-primary">API Wrapper</h1>
+        <h1 className="text-center text-primary">Search 🔎</h1>
         <h6>
           <Tooltip title={`As of ${today}`}>
             <MyComponent />

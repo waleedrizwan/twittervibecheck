@@ -2,7 +2,7 @@ import React, { useState, useStyles } from "react";
 import "./Style.css";
 import { useSelector, useDispatch } from "react-redux";
 import ClipLoader from "react-spinners/ClipLoader";
-import { css } from "@emotion/core";
+
 
 const TweetTable = (props) => {
   const tweetsData = useSelector((state) => state.tweets.tweetsArray);
@@ -51,13 +51,13 @@ const TweetTable = (props) => {
             </a>
           </td>
           <td>
-            {" "}
+            
             <a
               href={`https://twitter.com/twitter/statuses/${id}`}
               target="_blank"
             >
               {tweet}
-            </a>{" "}
+            </a>
           </td>
           <td>{formatNumber(favorites)}</td>
           <td>{formatNumber(retweets)}</td>
