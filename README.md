@@ -3,8 +3,8 @@
 ***credits to [djoksimo](https://github.com/djoksimo) for teaching me how to use Flask***
 
 ## About
-- This project was created to conduct sentiment analysis using tweets of individuals as well as tweets regarding a specific subject. 
-- I believe that Twitter is a valuable source of information regarding emotion and opinions.
+- This project was created to easily track the emotions of Twitter users   
+- Twitter is a valuable source of information regarding emotion and opinions.
 - Given that Twitter has millions of users of all backgrounds, it is the perfect resource for real-time global sentiment analysis.
 
 ## Sentiment Analysis
