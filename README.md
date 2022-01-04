@@ -10,3 +10,7 @@
 ## Sentiment Analysis
 - This project uses the **Sentiment Intensity Analyser** module from the **VADER Sentiment** Python library to analyze text. 
 - **[VADER (Valence Aware Dictionary and sentiment Reasoner)](https://github.com/cjhutto/vaderSentiment)** is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media.
+
+## Next Steps
+- The Twitter API has major limits on the amount of requests and Tweets that can be pulled at once which prevents more in depth analysis
+- I am currently trying to eliminate the need for the official API by using the unofficial SNSCRAPE social media scraper which allows for unlimited scraping  
