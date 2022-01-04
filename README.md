@@ -9,4 +9,4 @@
 
 ## Sentiment Analysis
 - This project uses the vaderSentiment Python package to analyze text. 
-- ***VADER (Valence Aware Dictionary and sentiment Reasoner)*** is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media.
+- **[VADER (Valence Aware Dictionary and sentiment Reasoner)](https://github.com/cjhutto/vaderSentiment)** is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media.
