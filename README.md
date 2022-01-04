@@ -13,4 +13,4 @@
 
 ## Next Steps
 - The Twitter API has major limits on the amount of requests and Tweets that can be pulled which prevents more in-depth analysis
-- I am currently trying to eliminate the need for the official API by using the unofficial SNSCRAPE social media scraper which allows for unrestricted Tweet retrieval 
+- I am currently trying to eliminate the need for the official API by using the unofficial SNSCRAPE social media scraper which may open the door for unrestricted Tweet retrieval 
