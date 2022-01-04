@@ -3,7 +3,7 @@
 ***credits to [djoksimo](https://github.com/djoksimo) for teaching me how to use Flask***
 
 ## About
-- This project was created to easily track the emotions of Twitter users   
+- This project was created so anyone can easily research real time Twitter discourse   
 - Twitter is a valuable source of information regarding emotion and opinions.
 - Given that Twitter has millions of users of all backgrounds, it is the perfect resource for real-time global sentiment analysis.
 
