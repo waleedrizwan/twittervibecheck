@@ -8,5 +8,5 @@
 - Given that Twitter has millions of users of all backgrounds, it is the perfect resource for real-time global sentiment analysis.
 
 ## Sentiment Analysis
-- This project uses the **SentimentIntensityAnalyser** module from the **Vader Sentiment** Python library to analyze text. 
+- This project uses the **Sentiment Intensity Analyser** module from the **VADER Sentiment** Python library to analyze text. 
 - **[VADER (Valence Aware Dictionary and sentiment Reasoner)](https://github.com/cjhutto/vaderSentiment)** is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media.
