@@ -1,6 +1,6 @@
-# Live @[TwitterVibeCheck.com](https://www.twittervibecheck.com)
+# See Live @[TwitterVibeCheck.com](https://www.twittervibecheck.com)
 
-credits to ***[djoksimo](https://github.com/djoksimo)*** for teaching me how to use Flask
+*** credits to [djoksimo](https://github.com/djoksimo) for teaching me how to use Flask ***
 
 ## About
 - This project was created to conduct sentiment analysis using tweets of individuals as well as tweets regarding a specific subject. 
