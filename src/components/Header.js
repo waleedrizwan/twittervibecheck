@@ -88,13 +88,12 @@ const Header = (props) => {
         `https://twitterscopedb-default-rtdb.firebaseio.com/total.json`,
 
         {
-          // create new data using a post request_
+          // create new data using a post request
           method: "GET",
         }
       );
 
       const resData = await response.json();
-
       let currentTotal;
 
       for (const key in resData) {
@@ -107,10 +106,8 @@ const Header = (props) => {
     inittotalTweets();
   }, []);
 
-  function formatNumber(num) {
-    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
-  }
-
+  let formatNumber = (num) => num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+  
   const MyComponent = React.forwardRef(function MyComponent(props, ref) {
     //  Spread the props to the underlying DOM element.
     return (

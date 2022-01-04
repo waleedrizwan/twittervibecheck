@@ -3,7 +3,6 @@ import "./Style.css";
 import { useSelector, useDispatch } from "react-redux";
 import ClipLoader from "react-spinners/ClipLoader";
 
-
 const TweetTable = (props) => {
   const tweetsData = useSelector((state) => state.tweets.tweetsArray);
   const isLoading = useSelector((state) => state.loading.loading);
@@ -25,7 +24,7 @@ const TweetTable = (props) => {
         tweet,
         username,
         verified,
-      } = item; //destructuring
+      } = item; 
 
       let sentimentEmoji = "😐";
 

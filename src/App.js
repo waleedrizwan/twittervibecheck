@@ -36,7 +36,7 @@ const App =  () => {
               <Nav className="mr-auto">
                 <Navbar.Brand>
                   <Link to="/">                    
-                    <h4 style={{ color: "white" }}>Tweet Extractor</h4>{" "}
+                    <h4 style={{ color: "white" }}>Tweet Search</h4>{" "}
                   </Link>
                 </Navbar.Brand>
                 <Navbar.Brand href="#about">
