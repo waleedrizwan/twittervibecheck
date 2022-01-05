@@ -131,11 +131,11 @@ const Header = (props) => {
         <br></br>
         <h1 className="text-center text-primary">Search 🔎</h1>
         <h6>
-        {totalTweetsToDate <= 0 ? null : <Tooltip title={`As of ${today}`}> <MyComponent />   </Tooltip>}   
+        {totalTweetsToDate <= 0 ? null : <div>   <Tooltip title={`As of ${today}`}> <MyComponent /> </Tooltip> <br />
+        <br />
+        <br /> </div> }   
         </h6>
-        <br />
-        <br />
-        <br />
+        
       </div>
 
       <div style={{ display: "flex", justifyContent: "center" }}>
