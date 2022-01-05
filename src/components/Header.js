@@ -99,6 +99,9 @@ const Header = (props) => {
       for (const key in resData) {
         currentTotal = parseFloat(resData[key].tweetsToDate);
       }
+      
+      // if currentTotal is undefined return 0 else return the defined number
+      currentTotal = !currentTotal ? 0 : currentTotal
 
       dispatch(tweetActions.initTotal(currentTotal));
     };
