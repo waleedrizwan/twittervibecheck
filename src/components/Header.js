@@ -132,7 +132,7 @@ const Header = (props) => {
         <h1 className="text-center text-primary">Search 🔎</h1>
         <h6>
           <Tooltip title={`As of ${today}`}>
-            <MyComponent />
+           {(totalTweetsToDate <= 0) ? null : <MyComponent />}   
           </Tooltip>
         </h6>
 
