@@ -122,6 +122,8 @@ const Header = (props) => {
   });
 
   let today = new Date();
+  const color = "#4A90E2";
+
   return (
     <div>
       <div className="text-center">
@@ -129,7 +131,7 @@ const Header = (props) => {
         <br></br>
         <h1 className="text-center text-primary">Search 🔎</h1>
         <h6>
-        {totalTweetsToDate <= 0 ? null : <div>   <Tooltip title={`As of ${today}`}> <MyComponent /> </Tooltip> <br />
+        {totalTweetsToDate <= 0 ? <div> </div> : <div> <Tooltip title={`As of ${today}`}> <MyComponent /> </Tooltip> <br />
         <br />
         <br /> </div> }   
         </h6>
@@ -162,7 +164,7 @@ const Header = (props) => {
       <div className="container" style={{ width: "300px" }}>
         {isLoading ? (
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <PulseLoader color={"#4A90E2"} loading={true} size={10} margin={2} />
+            <PulseLoader color={color} loading={true} size={10} margin={2} />
           </div>
         ) : trendingList.length === 0 ? (
           <p>No Trending Topics Were Found</p>
