@@ -121,8 +121,6 @@ const Header = (props) => {
     );
   });
 
-  const color = "#4A90E2";
-
   let today = new Date();
   return (
     <div>
@@ -164,7 +162,7 @@ const Header = (props) => {
       <div className="container" style={{ width: "300px" }}>
         {isLoading ? (
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <PulseLoader color={color} loading={true} size={10} margin={2} />
+            <PulseLoader color={"#4A90E2"} loading={true} size={10} margin={2} />
           </div>
         ) : trendingList.length === 0 ? (
           <p>No Trending Topics Were Found</p>
