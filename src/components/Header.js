@@ -9,9 +9,8 @@ import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import "./Header.css";
-import ClipLoader from "react-spinners/ClipLoader";
 import PulseLoader from "react-spinners/PulseLoader";
-import PacmanLoader from "react-spinners/PacmanLoader";
+
 
 const Header = (props) => {
   const dispatch = useDispatch();
@@ -110,8 +109,7 @@ const Header = (props) => {
   }, []);
 
   let formatNumber = (num) => num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
-  
-  const MyComponent = React.forwardRef(function MyComponent(props, ref) {
+  const MyComponent = React.forwardRef((props, ref) => {
     //  Spread the props to the underlying DOM element.
     return (
       <div {...props} ref={ref} style={{ fontSize: "20px" }}>
@@ -121,8 +119,12 @@ const Header = (props) => {
     );
   });
 
+  //  let MyComponent;
+  //  const MyComponent = (totalTweetsToDate <= 0 || !totalTweetsToDate) ? <div></div> : MyToolTip
+  
   let today = new Date();
   const color = "#4A90E2";
+  console.log("total tweets to date state variable", totalTweetsToDate)
 
   return (
     <div>
@@ -131,11 +133,13 @@ const Header = (props) => {
         <br></br>
         <h1 className="text-center text-primary">Search 🔎</h1>
         <h6>
-        {totalTweetsToDate <= 0 ? <div> </div> : <div> <Tooltip title={`As of ${today}`}> <MyComponent /> </Tooltip> <br />
-        <br />
-        <br /> </div> }   
+        {/* <MyComponent />    */}
+        {(totalTweetsToDate <= 0 || !totalTweetsToDate) ? <div></div> : <div> <Tooltip title={`As of ${today}`}><MyComponent /></Tooltip> <br/><br/><br/> </div> }   
         </h6>
-        
+
+        {/* <br />
+        <br />
+        <br />  */}
       </div>
 
       <div style={{ display: "flex", justifyContent: "center" }}>
