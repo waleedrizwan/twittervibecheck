@@ -89,7 +89,7 @@ const TweetTable = (props) => {
 
       <div className="text-center">
         {isLoading ? (
-          <ClipLoader color={color} loading={true} size={300} />
+          <ClipLoader color={color} loading={true} size={180} />
         ) : null}
         <div>
           {noTweetsFound ? (
