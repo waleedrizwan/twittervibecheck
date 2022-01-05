@@ -1,4 +1,4 @@
-# See Live @[TwitterVibeCheck.com](https://www.twittervibecheck.com)
+# See Live @[TwitterVibeCheck.com](https://www.twittervibecheck.com) [![Netlify Status](https://api.netlify.com/api/v1/badges/09e76211-eac5-4daa-b77c-d1539b339afa/deploy-status)](https://app.netlify.com/sites/youthful-stonebraker-d88df7/deploys)
 
 ***credits to [djoksimo](https://github.com/djoksimo) for teaching me how to use Flask***
 
