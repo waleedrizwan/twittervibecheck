@@ -27,16 +27,16 @@ const App =  () => {
     <div className="App">
       <Provider store={store}>
         <Router>
-          <Navbar bg="primary" expand="lg" variant="dark">
+          <Navbar bg="primary" expand="lg" variant="dark" fixed="top" >
             <Navbar.Brand>
               <h2>TwitterVibeCheck.com</h2>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
+              <Nav className="me-auto">
                 <Navbar.Brand>
                   <Link to="/">                    
-                    <h4 style={{ color: "white" }}>Tweet Search</h4>                                  
+                    <h4 style={{ color: "white", borderBottom:'thick #ff0000' }}>Tweet Search</h4>                                  
                   </Link>
                 </Navbar.Brand>
                 <Navbar.Brand href="#about">

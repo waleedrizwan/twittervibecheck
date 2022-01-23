@@ -10,8 +10,8 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import "./Header.css";
 import PulseLoader from "react-spinners/PulseLoader";
-
-
+import MoonLoader from "react-spinners/MoonLoader";
+ 
 const Header = (props) => {
   const dispatch = useDispatch();
   const tweetsData = useSelector((state) => state.tweets.tweetsArray);
@@ -131,6 +131,8 @@ const Header = (props) => {
       <div className="text-center">
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
         <h1 className="text-center text-primary">Search 🔎</h1>
         <h6>
         {/* <MyComponent />    */}
@@ -169,6 +171,7 @@ const Header = (props) => {
         {isLoading ? (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <PulseLoader color={color} loading={true} size={10} margin={2} />
+            {/* <MoonLoader color={color} loading={true} size={10} margin={2} /> */}
           </div>
         ) : trendingList.length === 0 ? (
           <p>No Trending Topics Were Found</p>

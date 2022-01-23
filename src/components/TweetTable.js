@@ -2,6 +2,8 @@ import React, { useState, useStyles } from "react";
 import "./Style.css";
 import { useSelector, useDispatch } from "react-redux";
 import ClipLoader from "react-spinners/ClipLoader";
+import MoonLoader from "react-spinners/MoonLoader";
+
 
 const TweetTable = (props) => {
   const tweetsData = useSelector((state) => state.tweets.tweetsArray);
