@@ -43,6 +43,8 @@ const About = (props) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      <br/>
+      <br/>
       <CssBaseline />
       <Container component="main" className={classes.main} maxWidth="sm">
         <Typography variant="h3" component="h1" gutterBottom>
