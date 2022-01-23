@@ -17,13 +17,14 @@ const CenteredModal = (props) => {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Getting Started</h4>
+        <h5>How To Use</h5>
         <p>
-          Simply select a filter and enter a corresponding username or hashtag
+          Select a method of Tweet retrieval and enter a username or hashtag
           and the tweets will appear below.
           <br />
-          If you enjoy using the site please consider giving us a star on{" "}
-          <a href="https://github.com/waleedrizwan/twittervibecheck"> Github⭐</a>
+          <br />
+          If you enjoy using the site please consider giving us a star on
+   <a href="https://github.com/waleedrizwan/twittervibecheck"> Github⭐</a>
         </p>
       </Modal.Body>
 

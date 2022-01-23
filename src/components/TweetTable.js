@@ -24,7 +24,7 @@ const TweetTable = (props) => {
         tweet,
         username,
         verified,
-      } = item; 
+      } = item;
 
       let sentimentEmoji = "😐";
 
@@ -39,18 +39,14 @@ const TweetTable = (props) => {
           <td>{date}</td>
           <td
             title={
-              verified ? "Verified Twitter User" : "Unverified Twitter User"
+              verified ? "Verified User" : "Unverified User"
             }
           >
-             <a
-              href={`https://twitter.com/${username}`}
-              target="_blank"
-            >
-            <div>@{username + (verified ? "☑️" : "")}</div>
+            <a href={`https://twitter.com/${username}`} target="_blank">
+              <div>@{username + (verified ? "☑️" : "")}</div>
             </a>
           </td>
           <td>
-            
             <a
               href={`https://twitter.com/twitter/statuses/${id}`}
               target="_blank"
@@ -66,9 +62,8 @@ const TweetTable = (props) => {
     });
   };
 
-
   const color = "#4A90E2";
- 
+
   return (
     <div>
       {tweetsData.length >= 1 ? (
@@ -77,9 +72,9 @@ const TweetTable = (props) => {
             <tr>
               <th>Date</th>
               <th>Username</th>
-              <th>Full Tweet Text</th>
-              <th># of Favorites</th>
-              <th># of Retweets</th>
+              <th>Tweet Text</th>
+              <th>Favorites</th>
+              <th>Retweets</th>
               <th>Compound Sentiment Score</th>
             </tr>
           </thead>

@@ -14,10 +14,11 @@ const SearchBar = (props) => {
   const [tweetSummary, setTweetSummary] = useState();
   const [sentimentSummary, setSentimentSummary] = useState();
   const [show, setShow] = useState(false);
-
+  const [placeholderSearch, setPlaceholderSearch] = useState("Popular: jeffbezos, elonmusk, realdonaldtrump")
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const isLoading = useSelector((state) => state.loading.loading);
   let summary;
 
   const dispatch = useDispatch();
@@ -110,7 +111,6 @@ const SearchBar = (props) => {
           }
 
           var avgScore = (total / sentimentScores.length).toFixed(3);
-
           var overallScore = "Neutral 😐";
 
           if (avgScore >= 0.05) {
@@ -127,7 +127,8 @@ const SearchBar = (props) => {
         console.log(err);
         dispatch(tweetActions.updateTweets([]));
         dispatch(loadingActions.setNoTweetsFound(true));
-        summary = `no tweets found for ${searchValue}`;
+        dispatch(loadingActions.setLoading(false));
+        summary = `No tweets found from ${searchValue}`;
         setTweetSummary(summary);
         let sentimentMessage = "";
         setSentimentSummary(sentimentMessage);
@@ -135,13 +136,17 @@ const SearchBar = (props) => {
   };
 
   let filterType;
+  let searchComment;
 
   if (type === "Username") {
-    filterType = "finding tweets by @Username";
+    filterType = "finding tweets by @username";
+    searchComment = "Popular: jeffbezos, elonmusk, realdonaldtrump";
   } else if (type === "Hashtag") {
-    filterType = "finding tweets by #Hashtag";
+    filterType = "finding tweets by hashtag";
+    searchComment = "Popular: covid, inflation, cryptocrash, putin  ";
   } else {
-    filterType = "finding tweets liked by @Username";
+    filterType = "finding tweets liked by @username";
+    searchComment = "Popular: jeffbezos, elonmusk, realdonaldtrump";
   }
 
   const handleKeyDown = (event) => {
@@ -167,16 +172,16 @@ const SearchBar = (props) => {
             <option defaultValue="Username" disabled>
               Filter Tweets By
             </option>
-            <option>Username</option>
+            <option fontWeight="bold"   > Username </option>
             <option>Hashtag</option>
-            <option>Liked Tweets By Username</option>
+            <option>Liked by user</option>
           </select>
         </div>
         <div className="float-child text-primary">
           <div className="form-group text-primary">
             <input
               id="userinput"
-              placeholder={`Enter Username or Hashtag ex "jeffbezos" "tesla" `}
+              placeholder={searchComment}
               maxLength="20"
               size="60"
               value={searchValue}
@@ -192,9 +197,10 @@ const SearchBar = (props) => {
             onClick={() => {
               handleApiCall();
             }}
+            disabled={isLoading}
           >
-            <h6 style={{color:'white'}} >
-            Pull Tweets
+            <h6 style={{color:'white', fontSize:'15px'   }} >
+            <strong >   {isLoading ? 'Loading…' : 'Click To Get Data'}</strong>
             </h6>
           </Button>
         </div>
