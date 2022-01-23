@@ -73,7 +73,7 @@ const Header = (props) => {
     if (trendingList) {
       return trendingList.map((elm, index) => (
         <tr className="sticky-column" key={index}>
-          <td>{elm["name"]}</td>
+          <td>{elm["name"].replace('#', "")}</td>
         </tr>
       ));
     } else {
